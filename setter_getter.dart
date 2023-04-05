@@ -2,8 +2,8 @@ import 'data/rectangle.dart';
 
 void main() {
   var rectangle = Rectangle();
-  rectangle.width = 100;
-  rectangle.length = 100;
+  rectangle.width = 0;
+  rectangle.length = 0;
 
   print(rectangle.width);
   print(rectangle.length);
