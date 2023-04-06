@@ -1,6 +1,6 @@
 import 'data/multimedia.dart';
 
-class Video with Playable, Stopable {}
+class Video extends Multimedia with Playable, Stopable {}
 
 void main() {
   var video = Video();
