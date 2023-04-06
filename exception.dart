@@ -15,5 +15,10 @@ class Validation {
 }
 
 void main() {
-  Validation.validate("", "");
+  try {
+    Validation.validate("", "");
+  } on ValidationException catch (exception) {
+    print('error ${exception.message}');
+  }
+  print('Selesai');
 }
