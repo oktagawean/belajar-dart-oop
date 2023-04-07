@@ -32,8 +32,9 @@ void main() {
 
   try {
     Validation.validate("okta", "eko");
-  } catch (e) {
+  } catch (e, stackTrace) {
     print('error : $e');
+    print(stackTrace);
   } finally {
     print('Finally');
   }
