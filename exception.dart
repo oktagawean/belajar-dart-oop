@@ -19,11 +19,21 @@ class Validation {
 
 void main() {
   try {
-    Validation.validate("okta", "eko");
+    Validation.validate("okta", "okta");
   } on ValidationException catch (exception) {
     print('error ${exception.message}');
   } on Exception catch (e) {
     print('error $e');
+  } finally {
+    print('Finally');
+  }
+
+  // ignore exception class
+
+  try {
+    Validation.validate("okta", "eko");
+  } catch (e) {
+    print('error : $e');
   } finally {
     print('Finally');
   }
