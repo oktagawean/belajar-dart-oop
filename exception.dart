@@ -11,14 +11,22 @@ class Validation {
     if (password == "") {
       throw ValidationException('Password is blank');
     }
+    if (username != 'okta' || password != 'okta') {
+      throw Exception('Login is failed');
+    }
   }
 }
 
 void main() {
   try {
-    Validation.validate("", "");
+    Validation.validate("okta", "eko");
   } on ValidationException catch (exception) {
     print('error ${exception.message}');
+  } on Exception catch (e) {
+    print('error $e');
+  } finally {
+    print('Finally');
   }
+
   print('Selesai');
 }
